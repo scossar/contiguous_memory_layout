@@ -1,7 +1,0 @@
-#N canvas 2017 343 450 300 16;
-#X obj 132 47 inlet;
-#X obj 72 176 print;
-#X obj 22 93 bng 23 250 50 0 empty empty empty 0 -12 0 16 #fcfcfc #000000 #000000;
-#X obj 72 148 value \$0_m;
-#X connect 2 0 3 0;
-#X connect 3 0 1 0;
