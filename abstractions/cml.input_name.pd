@@ -1,0 +1,13 @@
+#N canvas 1168 409 484 394 16;
+#X obj 126 59 inlet dollar_zero;
+#X msg 105 220 symbol \$1_\$2;
+#X obj 105 139 f;
+#X obj 105 192 list append X;
+#X obj 105 248 outlet symbol;
+#X obj 22 59 inlet bang;
+#X text 20 14 // Returns the dollar_zero symbol for input array X \;;
+#X connect 0 0 2 1;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 5 0 2 0;
