@@ -1,0 +1,10 @@
+#N canvas 1724 85 1712 1413 16;
+#X text 46 14 // dW^[l] = 1/m . dZ^[l]A^[l-1]T \;;
+#X obj 70 104 inlet bang;
+#X obj 230 104 inlet m;
+#X obj 350 103 inlet n;
+#X obj 500 103 inlet n_prev;
+#X obj 700 102 inlet s_dZ;
+#X obj 890 102 inlet s_A_prev;
+#X obj 1060 102 inlet s_dW;
+#X obj 172 285 cml.get_element;
