@@ -60,7 +60,6 @@
 #X obj 685 556 v \$0_k;
 #X obj 624 590 v \$0_i;
 #X text 106 667 // multiplying flattened matrices A.T . B \; for i in range (n) \\\\ cols of A \; ....for j in range(p) \\\\ cols of B \; ........sum = 0 \; ........for k in range(m) \\\\ cols of A.T (rows of A) \; ............// A.T[i \, k] = A[k \, i] = A[k*n + i] \; ............// B[k \, j] = B[k*p + j] \; ............sum += A[k*n + i] * B[k*n + j] \; ........C[i*n + j] = sum \; // NOTE: instead of accessing A[i*n + k] as in a regular matrix \, access A[k*n + i] to get the transponsed element \;;
-#X text 110 910 // NOTE: for valid transpositions \, the cols_a and cols_b inlets are always going to be set to the same value.;
 #X connect 0 0 48 0;
 #X connect 1 0 7 0;
 #X connect 2 0 4 0;
