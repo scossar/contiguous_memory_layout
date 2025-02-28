@@ -1,4 +1,4 @@
-#N canvas 8 70 2081 1332 16;
+#N canvas 1724 70 1712 1332 16;
 #X obj 34 15 inlet;
 #X obj 1368 19 inlet dollar_zero;
 #X obj 361 85 list split 1;
@@ -137,6 +137,7 @@
 #X obj 507 1171 f;
 #X obj 725 1171 f;
 #X obj 34 991 t b b b b b b b b b, f 38;
+#X text 172 8 // TODO: move spigot objects to before function calls (params are getting set when not needed) \;;
 #X connect 0 0 21 0;
 #X connect 1 0 9 0;
 #X connect 2 0 11 0;
