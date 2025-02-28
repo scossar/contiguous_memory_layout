@@ -739,7 +739,7 @@
 #X msg 1182 768 bang;
 #X obj 1314 969 print;
 #X msg 393 987 0;
-#X obj 392 1021 cml.array_name b;
+#X obj 392 1021 cml.array_name W;
 #X connect 1 0 0 0;
 #X connect 2 0 0 1;
 #X connect 4 0 5 0;

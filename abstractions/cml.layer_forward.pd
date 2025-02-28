@@ -1,4 +1,4 @@
-#N canvas 1724 70 1712 1332 16;
+#N canvas 1512 384 1712 863 16;
 #X obj 31 46 inlet;
 #X obj 1221 46 inlet dollar_zero;
 #X obj 196 112 s \$0_l;
