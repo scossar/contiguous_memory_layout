@@ -398,7 +398,7 @@
 #X obj 144 26 bng 40 250 50 0 \$0_init empty init 0 -12 0 16 #fcfcfc #000000 #000000;
 #X obj 937 220 r \$0_init_l1;
 #X obj 937 248 t a b, f 12;
-#N canvas 642 558 689 326 init_layer_1 0;
+#N canvas 646 594 689 326 init_layer_1 0;
 #X obj 45 123 v \$0_nL-1;
 #X obj 164 123 v \$0_nx;
 #X obj 283 123 v \$0_m;
@@ -408,7 +408,7 @@
 #X obj 45 156 pack f f f s f, f 60;
 #X obj 45 240 s \$0_init_l1;
 #X msg 45 189 layer_number 1 \, layer_dims \$1 \$2 \, m \$3 \, activation \$4 \, leak \$5 \, initial_layer 1;
-#X msg 402 123 symbol tanh;
+#X msg 402 123 symbol linear;
 #X connect 0 0 6 0;
 #X connect 1 0 6 1;
 #X connect 2 0 6 2;
@@ -423,7 +423,7 @@
 #X connect 8 0 7 0;
 #X connect 9 0 6 3;
 #X restore 38 302 pd init_layer_1;
-#N canvas 1388 426 689 326 init_layer_0 0;
+#N canvas 1392 462 689 326 init_layer_0 0;
 #X obj 283 123 v \$0_m;
 #X obj 522 123 v \$0_leak;
 #X obj 45 60 t b b b b b, f 60;
@@ -433,7 +433,7 @@
 #X obj 164 123 v \$0_nL-1;
 #X msg 402 123 symbol linear;
 #X obj 45 240 s \$0_init_l0;
-#X msg 45 189 layer_number 0 \, layer_dims \$1 \$2 \, m \$3 \, activation \$4 \, leak \$5 \, initial_layer 0;
+#X msg 45 189 layer_number 0 \, layer_dims \$1 \$2 \, m \$3 \, activation \$4 \, leak \$5;
 #X connect 0 0 4 2;
 #X connect 1 0 4 4;
 #X connect 2 0 5 0;
