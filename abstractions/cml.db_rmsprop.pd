@@ -1,4 +1,4 @@
-#N canvas 667 213 1145 902 16;
+#N canvas 675 285 1145 902 16;
 #X text 32 461 // db^[l] = 1/m sum(dZ^[l]) \;;
 #X obj 28 52 inlet bang;
 #X obj 433 511 array sum;
@@ -24,8 +24,8 @@
 #X text 328 183 // for n in range(num_nodes) \;;
 #X text 34 524 // dZ is a 1D array of size (m * num_nodes) \; There is 1 db/Vdb value for each node \; m sets the number of values to sum \; n * m sets the element to start summing from \;;
 #X obj 1011 52 inlet rho;
-#X text 37 640 // RMSProp \; Sdb = beta * Sdb + (1 - beta) * db^2 \;;
 #X obj 694 645 expr $f3 * $f2 + (1 - $f3) * pow($f1 \, 2);
+#X text 37 640 // RMSProp \; Sdb = rho * Sdb + (1 - rho) * db^2 \;;
 #X connect 1 0 6 0;
 #X connect 2 0 4 0;
 #X connect 4 0 21 0;
@@ -45,7 +45,7 @@
 #X connect 16 0 19 0;
 #X connect 16 1 18 2;
 #X connect 16 2 17 2;
-#X connect 18 0 26 1;
+#X connect 18 0 25 1;
 #X connect 19 0 18 1;
 #X connect 20 0 2 0;
 #X connect 20 1 11 0;
@@ -53,6 +53,6 @@
 #X connect 20 3 17 1;
 #X connect 20 4 18 0;
 #X connect 21 0 3 0;
-#X connect 21 1 26 0;
-#X connect 24 0 26 2;
-#X connect 26 0 17 0;
+#X connect 21 1 25 0;
+#X connect 24 0 25 2;
+#X connect 25 0 17 0;
