@@ -1,4 +1,4 @@
-#N canvas 684 70 2008 1332 16;
+#N canvas 4 70 2081 1399 16;
 #X obj 87 43 inlet bang;
 #X obj 1081 658 t b s;
 #X obj 1049 721 array get;
@@ -71,10 +71,10 @@
 #X obj 1395 1296 array set, f 33;
 #X obj 863 929 t f f f, f 80;
 #X obj 847 1110 t f f, f 50;
-#X text 137 871 // RMSProp \; SdW = beta * SdW + (1 - beta)dW^2 \;;
 #X obj 1571 43 inlet s_sdw;
 #X obj 1335 1234 expr $f3 * $f2 + (1 - $f3) * pow($f1 \, 2), f 51;
 #X obj 1740 43 inlet rho;
+#X text 137 871 // RMSProp \; SdW = rho * SdW + (1 - rho)dW^2 \;;
 #X connect 0 0 44 0;
 #X connect 1 0 3 0;
 #X connect 1 1 2 2;
@@ -141,7 +141,7 @@
 #X connect 58 2 60 0;
 #X connect 59 0 71 0;
 #X connect 61 0 59 1;
-#X connect 66 0 74 1;
+#X connect 66 0 73 1;
 #X connect 67 0 66 1;
 #X connect 68 0 67 0;
 #X connect 68 1 66 2;
@@ -150,7 +150,7 @@
 #X connect 70 1 69 1;
 #X connect 70 2 66 0;
 #X connect 71 0 9 0;
-#X connect 71 1 74 0;
-#X connect 73 0 68 0;
-#X connect 74 0 69 0;
-#X connect 75 0 74 2;
+#X connect 71 1 73 0;
+#X connect 72 0 68 0;
+#X connect 73 0 69 0;
+#X connect 74 0 73 2;

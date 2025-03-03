@@ -1,4 +1,4 @@
-#N canvas 4 70 1917 1438 16;
+#N canvas 1724 70 1712 1332 16;
 #X obj 34 15 inlet;
 #X obj 1768 19 inlet dollar_zero;
 #X obj 287 85 list split 1;
@@ -82,7 +82,7 @@
 #X obj 1552 84 s \$0_gd;
 #X obj 34 52 route bang layer_number layer_dims m activation leak skip_dz initial_layer momentum mu rmsprop rho gd, f 206;
 #X obj 1172 84 s \$0_mu;
-#N canvas 1506 245 1659 574 dw_gradient_descent 0;
+#N canvas 1510 281 1659 574 dw_gradient_descent 0;
 #X obj 1226 233 r \$0_initial_layer;
 #N canvas 1035 607 526 394 a_prev_for_layer 0;
 #X obj 55 251 cml.array_name A;
@@ -169,7 +169,7 @@
 #X connect 24 1 21 0;
 #X connect 24 2 18 0;
 #X restore 34 474 pd dw_gradient_descent;
-#N canvas 1277 219 1832 549 dw_momentum 0;
+#N canvas 1281 255 1832 549 dw_momentum 0;
 #X obj 1128 244 r \$0_initial_layer;
 #N canvas 1035 607 526 394 a_prev_for_layer 0;
 #X obj 55 251 cml.array_name A;
@@ -270,7 +270,7 @@
 #X connect 29 1 25 0;
 #X connect 29 2 24 0;
 #X restore 34 507 pd dw_momentum;
-#N canvas 1037 330 1938 580 dw_rmsprop 0;
+#N canvas 1724 70 1712 1332 dw_rmsprop 0;
 #X obj 61 369 cml.dw_rmsprop, f 207;
 #X obj 122 174 f;
 #X obj 61 207 spigot 0;
