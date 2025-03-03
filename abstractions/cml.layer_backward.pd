@@ -82,7 +82,7 @@
 #X obj 1552 84 s \$0_gd;
 #X obj 34 52 route bang layer_number layer_dims m activation leak skip_dz initial_layer momentum mu rmsprop rho gd, f 206;
 #X obj 1172 84 s \$0_mu;
-#N canvas 1510 281 1659 574 dw_gradient_descent 0;
+#N canvas 1514 317 1659 574 dw_gradient_descent 0;
 #X obj 1226 233 r \$0_initial_layer;
 #N canvas 1035 607 526 394 a_prev_for_layer 0;
 #X obj 55 251 cml.array_name A;
@@ -169,7 +169,7 @@
 #X connect 24 1 21 0;
 #X connect 24 2 18 0;
 #X restore 34 474 pd dw_gradient_descent;
-#N canvas 1281 255 1832 549 dw_momentum 0;
+#N canvas 1604 783 1832 549 dw_momentum 0;
 #X obj 1128 244 r \$0_initial_layer;
 #N canvas 1035 607 526 394 a_prev_for_layer 0;
 #X obj 55 251 cml.array_name A;
@@ -371,7 +371,7 @@
 #X connect 29 1 2 0;
 #X connect 29 2 1 0;
 #X restore 34 540 pd dw_rmsprop;
-#N canvas 705 388 1262 484 db_gradient_descent 0;
+#N canvas 709 424 1262 484 db_gradient_descent 0;
 #X obj 77 301 cml.db, f 108;
 #X obj 313 235 r \$0_n;
 #X obj 528 235 r \$0_m;
@@ -417,7 +417,7 @@
 #X connect 18 1 16 0;
 #X connect 18 2 13 0;
 #X restore 34 573 pd db_gradient_descent;
-#N canvas 370 371 1557 474 db_momentum 0;
+#N canvas 374 407 1557 474 db_momentum 0;
 #X obj 121 308 cml.db_with_momentum, f 153;
 #X obj 203 88 r \$0_momentum;
 #X obj 182 116 f;
@@ -477,7 +477,7 @@
 #X connect 23 2 2 0;
 #X connect 25 0 23 0;
 #X restore 34 606 pd db_momentum;
-#N canvas 647 356 1512 549 db_rmsprop 0;
+#N canvas 651 392 1512 549 db_rmsprop 0;
 #X obj 81 310 cml.db_rmsprop, f 157;
 #X obj 142 121 f;
 #X obj 81 154 spigot 0;
@@ -537,6 +537,7 @@
 #X connect 24 1 2 0;
 #X connect 24 2 1 0;
 #X restore 34 639 pd db_rmsprop;
+#X text 278 487 // TODO: send \$0_init at start of process to zero out the spigot params. Otherwise they persist after changes unless explicitly overridden \, e.g. rmsprop 0 \;;
 #X connect 0 0 81 0;
 #X connect 1 0 9 0;
 #X connect 2 0 11 0;

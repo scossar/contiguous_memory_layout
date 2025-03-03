@@ -1,4 +1,4 @@
-#N canvas 1800 330 1300 669 16;
+#N canvas 1846 629 1300 669 16;
 #X obj 36 69 inlet bang;
 #X obj 1066 69 inlet activation_number;
 #X obj 36 600 outlet done;
