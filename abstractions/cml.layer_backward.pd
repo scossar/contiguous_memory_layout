@@ -1,6 +1,6 @@
-#N canvas 0 66 3440 1340 16;
+#N canvas 1724 70 1712 1332 16;
 #X obj 34 15 inlet;
-#X obj 2388 19 inlet dollar_zero;
+#X obj 2218 19 inlet dollar_zero;
 #X obj 263 85 list split 1;
 #X obj 493 113 select relu tanh sigmoid linear;
 #X msg 493 146 1;
@@ -8,7 +8,7 @@
 #X msg 615 146 3;
 #X msg 674 146 4;
 #X msg 738 146 0;
-#X obj 2388 52 s \$0_ns;
+#X obj 2218 52 s \$0_ns;
 #X obj 148 85 s \$0_l;
 #X obj 263 147 s \$0_n;
 #X obj 309 113 s \$0_n_prev;
@@ -742,9 +742,9 @@
 #X connect 31 8 25 0;
 #X connect 32 0 0 1;
 #X restore 34 758 pd db_adam;
-#X obj 2178 85 s \$0_reset;
-#X msg 2178 52 0;
-#X obj 2178 19 inlet reset_optimizer;
+#X obj 2008 85 s \$0_reset;
+#X msg 2008 52 0;
+#X obj 2008 19 inlet reset_optimizer;
 #X obj 34 52 route bang layer_number layer_dims m activation leak skip_dz initial_layer momentum mu rmsprop rho gd adam regularize lambda, f 230;
 #X obj 1756 83 s \$0_lambda;
 #N canvas 50 434 1747 567 dw_l2_regularization 0;
@@ -805,6 +805,7 @@
 #X connect 24 5 20 0;
 #X restore 34 616 pd dw_l2_regularization;
 #X obj 1641 84 s \$0_l2_reg;
+#X text 2100 82 // NOTE: this is also being used to reset the regularization boolean \; Maybe there's a better way...;
 #X connect 0 0 94 0;
 #X connect 1 0 9 0;
 #X connect 2 0 11 0;
